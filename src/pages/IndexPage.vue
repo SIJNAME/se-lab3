@@ -8,20 +8,21 @@
       <q-input
         filled
         v-model="name"
-        label="Your name *"
-        hint="Name and surname"
+        label="名字 姓氏"
+        hint="名字和姓氏"
         lazy-rules
-        :rules="[ val => val && val.length > 0 || 'Please type something']"
+        :rules="[ val => val && val.length > 0 || '請輸入名字和姓氏。']"
       />
+     
       <q-input
         filled
         type="number"
         v-model="age"
-        label="Your age *"
+        label="你的年齡*"
         lazy-rules
         :rules="[
-          val => val !== null && val !== '' || 'Please type your age',
-          val => val > 0 && val < 100 || 'Please type a real age'
+          val => val !== null && val !== '' || '請輸入您的年齡',
+          val => val > 0 && val < 100 || '請輸入真實年齡'
         ]"
       />
       <q-toggle v-model="accept" label="I accept the license and terms" />
