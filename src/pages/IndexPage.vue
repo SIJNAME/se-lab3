@@ -9,21 +9,38 @@
       <q-input
         filled
         v-model="name"
+<<<<<<< HEAD
         label="ชื่อ-สกุล *"
         hint="ชื่อและนามสกุล"
         lazy-rules
         :rules="[ val => val && val.length > 0 || 'กรุณาพิมพ์ชื่อ']"
       />
 
+=======
+        label="名字 姓氏"
+        hint="名字和姓氏"
+        lazy-rules
+        :rules="[ val => val && val.length > 0 || '請輸入名字和姓氏。']"
+      />
+     
+>>>>>>> Chinese-lang
       <q-input
         filled
         type="number"
         v-model="age"
+<<<<<<< HEAD
         label="อายุ *"
         lazy-rules
         :rules="[
           val => val !== null && val !== '' || 'กรุณาใส่อายุ',
           val => val > 0 && val < 100 || 'กรุณาใส่อายุจริง'
+=======
+        label="你的年齡*"
+        lazy-rules
+        :rules="[
+          val => val !== null && val !== '' || '請輸入您的年齡',
+          val => val > 0 && val < 100 || '請輸入真實年齡'
+>>>>>>> Chinese-lang
         ]"
       />
 
